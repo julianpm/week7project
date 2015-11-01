@@ -12,9 +12,10 @@ function theme_setup() {
 	*  sizes with add_image_size. */
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size(120, 90, true);
-	add_image_size('square', 150, 150, true);
+	add_image_size('aboutPicture', 550, 374, true);
 
-
+	add_filter( 'image_size_names_choose', 'my_custom_sizes' );
+ 
 	// Add default posts and comments RSS feed links to head
 	add_theme_support( 'automatic-feed-links' );
 
@@ -22,7 +23,8 @@ function theme_setup() {
 	* You can allow clients to create multiple menus by
   * adding additional menus to the array. */
 	register_nav_menus( array(
-		'primary' => 'Primary Navigation'
+		'primary' => 'Primary Navigation',
+		'gallery' => 'Gallery Navigation'
 	) );
 
 	/*
@@ -38,6 +40,14 @@ endif;
 
 add_action( 'after_setup_theme', 'theme_setup' );
 
+
+add_filter( 'image_size_names_choose', 'my_custom_sizes' );
+ 
+function my_custom_sizes( $sizes ) {
+    return array_merge( $sizes, array(
+        'aboutPicture' => __( 'About Picture' ),
+    ) );
+}
 
 /* Add all our JavaScript files here.
 We'll let WordPress add them to our templates automatically instead
@@ -266,3 +276,24 @@ function get_post_parent($post) {
 		return $post->ID;
 	}
 }
+
+update_option('image_default_link_type','none');
+
+
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page(array(
+		'page_title' 	=> 'Theme General Settings',
+		'menu_title'	=> 'Theme Settings',
+		'menu_slug' 	=> 'theme-general-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
+}
+
+
+
+
+
+
+

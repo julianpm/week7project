@@ -1,33 +1,64 @@
+<?php
+/**
+ * The header template
+ *
+ * Displays all of the <head> section and everything up till <div id="main">
+ *
+ * @package Starter_Theme
+ */
+?>
+ 
 <!DOCTYPE html>
+ 
+<!--[if lt IE 9]>
+<html id="ie" <?php language_attributes(); ?>>
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
 <html <?php language_attributes(); ?>>
+<!--<![endif]-->
+ 
 <head>
-	<?php // Load Meta ?>
-  <meta charset="<?php bloginfo( 'charset' ); ?>" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><?php  wp_title('|', true, 'right'); ?></title>
-  <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-
-  <?php // Load our CSS ?>
-  <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-
-  <?php wp_head(); ?>
+    <meta charset="<?php bloginfo( "charset" ); ?>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="pingback" href="<?php bloginfo( "pingback_url" ); ?>" />
+    <link rel="stylesheet" href="<?php bloginfo('template_url') ?>/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Yantramanav' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Pontano+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <?php // Lets other plugins and files tie into our theme's <head>:
+    wp_head(); ?>
 </head>
-
-
+ 
 <body <?php body_class(); ?>>
+<div id="page">
 
-<header>
-  <div class="container">
-    <h1>
-      <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
-        <?php bloginfo( 'name' ); ?>
-      </a>
-    </h1>
+        <?php if ( is_front_page() ) : ?>
+          <header id="top" role="banner" class="site-header homeContainer">
+        <!-- <a href="#main" class="visuallyhidden focusable" id="skiptomain"></a> -->
+        
+          <nav class="siteNavigation--Main" role="navigation">
+              <ul class="mainMenu flex">
+                  <?php wp_nav_menu( array( "theme_location" => "primary", "container" => '', 'items_wrap'=> '%3$s' ) ); ?>
+              </ul><!-- .menu -->
+          </nav><!-- siteNavigation -->  
+          </header> <!-- END OF CONTAINER -->
+  
+  
+        <?php else : ?>
+      <header id="top" role="banner" class="site-header">
+        <!-- <a href="#main" class="visuallyhidden focusable" id="skiptomain"></a> -->
+        
+          <nav class="siteNavigation--Main" role="navigation">
+              <ul class="siteMenu flex">
+                  <?php wp_nav_menu( array( "theme_location" => "primary", "container" => '', 'items_wrap'=> '%3$s' ) ); ?>
+              </ul><!-- .menu -->
+          </nav><!-- siteNavigation -->  
 
-    <?php wp_nav_menu( array(
-      'container' => false,
-      'theme_locations' => 'primary'
-    )); ?>
-  </div> <!-- /.container -->
-</header><!--/.header-->
+        <?php endif; ?>
+
+        
+      </header><!--  .container -->
+
+    <!-- <main id="main"> -->
 

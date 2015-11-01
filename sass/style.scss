@@ -7,24 +7,38 @@
 * Author URI: http://hackeryou.com
 */
 
+$headerFont: 'Yantramanav', sans-serif;
+$mainFont: 'Pontano Sans', sans-serif;
 @import 'normalize';
 @import 'typography';
 @import 'navigation';
 @import 'sidebar';
 @import 'comments';
 @import 'footer';
+
 /*
 ====================================
 Default Styling
 ====================================
 */
 
+
+
+h1{
+	font-size:48px;
+}
+
 img {
 	max-width: 100%;
 }
 
-body {
+.home {
 	color: #333;
+}
+
+.flex{
+	display:flex;
+	flex-wrap:wrap;
 }
 
 .container {
@@ -33,7 +47,6 @@ body {
 }
 
 .content {
-	float: left;
 	width: 65%;
 	margin-right: 5%;
 }
@@ -41,6 +54,173 @@ body {
 .full {
 	width: 100%;
 }
+
+
+
+
+
+// UNIVERSAL STYLES
+
+.siteMenu{
+	list-style:none;
+	justify-content: center;
+	margin:0 auto;
+	padding:15px 0;
+	width:48%;
+	border-bottom:1px solid rgba(black, 0.7);
+	li{
+		padding-bottom:5px;
+	}
+	a{
+		color:black;
+		padding:15px 35px;
+		font-family:$headerFont;
+		font-size:14px;
+		&:hover{
+			background: rgba(black, 0.7);
+			color:white;
+			transition:0.75s;
+		}
+	}
+}
+
+.mainFooter{
+	font-size:14px;
+	color:black;
+	padding:10px 0;
+	text-align:center;
+	font-family:$headerFont;
+	border-top:black 1px solid;
+	max-width: 30%;
+	margin: 40px auto 0 auto;
+}
+
+.socialIcons a{
+		color:black;
+		padding-left:1.5%;
+		margin-right:1%;
+		&:hover{
+			color:#7BC3DB;
+			transition:0.5s;
+		}
+	}
+
+
+
+
+
+// HOME
+
+.homeContainer{
+	max-width: 70%;
+	margin:0 auto;
+	height:90vh;
+}
+
+.home{
+background: #222 url(assets/fullPagePic.jpg) no-repeat;
+background-size:75%;
+background-position: 50% 0;
+}
+
+.mainMenu{
+	list-style:none;
+	justify-content:space-around;
+	padding:58% 0 0 0;
+	a{
+		padding:8px 25px;
+		background: rgba(black,0.7);
+		color:white;
+		font-family:$headerFont;
+		font-size:20px;
+		letter-spacing:1px;
+		&:hover{
+			color:black;
+			background: rgba(white,0.7);
+			transition:0.75s;
+		}
+	}
+}
+
+
+
+
+
+// CONTACT
+
+.contactInfo{
+	max-width: 80%;
+	margin:3% auto 3% auto;
+	justify-content:space-around;
+}
+
+.address a{
+	color:black;
+	&:hover{
+		color:#7BC3DB;
+		transition:0.5s;
+	}
+}
+
+.contactStuff{
+	font-family:$mainFont;
+	letter-spacing:0.5px;
+	justify-content:space-around;
+	width: 50%;
+	padding-top:9%;
+}
+
+.shopMap{
+	height: 400px;
+	width:400px;
+	border: #ccc solid 1px;
+	margin: 0;
+}
+
+.disclaimer{
+	text-align:center;
+	font-family:$mainFont;
+	letter-spacing:0.5px;
+}
+
+
+
+
+
+// ABOUT
+
+.aboutInfo{
+	max-width: 85%;
+	margin:4% auto 0 auto;
+	font-family:$mainFont;
+	justify-content:space-between;
+	font-size:16px;
+}
+
+.aboutPagePic{
+	width:50%;
+	margin:0;
+}
+
+.shopStuff{
+	width: 46%;
+}
+
+.description{
+	margin-top:8%;
+}
+
+.shopRules{
+	margin-top:8%;
+}
+
+
+
+
+
+
+
+
 
 
 

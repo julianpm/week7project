@@ -16,6 +16,7 @@ get_header();  ?>
       <?php the_content(); ?>
 
     <?php endwhile; // end the loop?>
+  
   </div> <!-- /.container -->
 </div> <!-- /.main -->
 
