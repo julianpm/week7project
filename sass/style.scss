@@ -9,6 +9,7 @@
 
 $headerFont: 'Yantramanav', sans-serif;
 $mainFont: 'Pontano Sans', sans-serif;
+$blue:#7BC3DB;
 @import 'normalize';
 @import 'typography';
 @import 'navigation';
@@ -92,7 +93,7 @@ img {
 	font-family:$headerFont;
 	border-top:black 1px solid;
 	max-width: 30%;
-	margin: 40px auto 0 auto;
+	margin: 4% auto 0 auto;
 }
 
 .socialIcons a{
@@ -100,7 +101,7 @@ img {
 		padding-left:1.5%;
 		margin-right:1%;
 		&:hover{
-			color:#7BC3DB;
+			color:$blue;
 			transition:0.5s;
 		}
 	}
@@ -157,7 +158,7 @@ background-position: 50% 0;
 .address a{
 	color:black;
 	&:hover{
-		color:#7BC3DB;
+		color:$blue;
 		transition:0.5s;
 	}
 }
@@ -194,7 +195,6 @@ background-position: 50% 0;
 	margin:4% auto 0 auto;
 	font-family:$mainFont;
 	justify-content:space-between;
-	font-size:16px;
 }
 
 .aboutPagePic{
@@ -218,14 +218,102 @@ background-position: 50% 0;
 
 
 
+// GALLERY
+
+.first_artist_name, .second_artist_name{
+	text-align:center;
+	margin-top:4%;
+	font-family:$mainFont;
+}
+
+.firstArtistPortfolio, .secondArtistPortfolio{
+	justify-content:space-around;
+	margin-top:3%;
+}
+
+.firstArtistPic, .secondArtistPic{
+	width: 45%;
+}
+
+.firstArtistGallery, .secondArtistGallery{
+	width: 45%;
+	align-items:center;
+}
+
+.firstPortfolio, .secondPortfolio{
+	width: 100%;
+	list-style:none;
+	justify-content:space-around;
+	margin:0;
+	padding:0;
+	li{
+		margin:0;
+		padding:0;
+	}
+}
+
+.divider{
+	width: 50%;
+	border-top:1px solid black;
+	margin:4% auto 0 auto;
+}
 
 
 
 
 
 
+// BLOG
+
+.mainBlog{
+	width:100%;
+	justify-content:space-around;
+	margin-top:4%;
+	font-family:$mainFont;
+}
+
+.entry-title a, .continueReading, .widget_recent_entries a, .widget_archive a, .widget_calendar a, .widget_categories a{
+	color:black;
+	&:hover{
+		color:$blue;
+		transition:0.5s;
+	}
+}
+
+// individual blog post styles:
+
+	.allBlogPosts{
+		width: 60%;
+	}
+
+	.blogPost{
+		margin:5% 0;
+		justify-content:space-around;
+	}
+
+	// .blogPostPic{
+	// 	margin-top:1%;
+	// }
+
+	.entry-content{
+		width: 45%;
+		h3{
+			margin:0;
+			padding:0;
+		}
+	}	
+	
 
 
+// sidebar styles 
+
+.sidebar{
+	width: 30%;
+}
+
+.widget_calendar{
+	margin-top:8%;
+}
 
 
 

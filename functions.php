@@ -12,9 +12,9 @@ function theme_setup() {
 	*  sizes with add_image_size. */
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size(120, 90, true);
-	add_image_size('aboutPicture', 550, 374, true);
-
-	add_filter( 'image_size_names_choose', 'my_custom_sizes' );
+	add_image_size('standardPicture', 550, 374, true);
+	add_image_size('galleryPicture', 200, 133, true);
+	add_image_size('blogPicture', 300, 200, true);
  
 	// Add default posts and comments RSS feed links to head
 	add_theme_support( 'automatic-feed-links' );
@@ -45,7 +45,7 @@ add_filter( 'image_size_names_choose', 'my_custom_sizes' );
  
 function my_custom_sizes( $sizes ) {
     return array_merge( $sizes, array(
-        'aboutPicture' => __( 'About Picture' ),
+        'standardPicture' => __( 'standardPicture' ),
     ) );
 }
 
@@ -126,7 +126,7 @@ add_filter( 'wp_page_menu_args', 'hackeryou_page_menu_args' );
  * Sets the post excerpt length to 40 characters.
  */
 function hackeryou_excerpt_length( $length ) {
-	return 40;
+	return 30;
 }
 add_filter( 'excerpt_length', 'hackeryou_excerpt_length' );
 
@@ -134,7 +134,7 @@ add_filter( 'excerpt_length', 'hackeryou_excerpt_length' );
  * Returns a "Continue Reading" link for excerpts
  */
 function hackeryou_continue_reading_link() {
-	return ' <a href="'. get_permalink() . '">Continue reading <span class="meta-nav">&rarr;</span></a>';
+	return ' <a class="continueReading" href="'. get_permalink() . '">Continue reading <span class="meta-nav">&rarr;</span></a>';
 }
 
 /**
