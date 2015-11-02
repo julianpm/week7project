@@ -26,6 +26,7 @@
 			<?php endif; ?>
 
 		</span>
+
 	</p>
 
 </footer> <!-- END OF MAINFOOTER -->
