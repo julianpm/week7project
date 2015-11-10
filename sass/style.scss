@@ -93,20 +93,54 @@ img {
 	text-align:center;
 	font-family:$headerFont;
 	border-top:black 1px solid;
-	max-width: 30%;
+	max-width: 35%;
 	margin: 4% auto 0 auto;
+	p{
+		display:inline;
+	}
 }
 
 .socialIcons a{
+	color:black;
+	padding-left:1.5%;
+	margin-right:1%;
+	&:hover{
+		color:$blue;
+		transition:0.5s;
+	}
+}
+
+.footerMenu{
+	margin:0;
+	padding:0;
+	list-style:none;
+	display:inline;
+	li{
+		display:inline;
+	}
+	a{
 		color:black;
-		padding-left:1.5%;
-		margin-right:1%;
 		&:hover{
 			color:$blue;
 			transition:0.5s;
 		}
 	}
+}
 
+.creditsHeader{
+	font-family:$headerFont;
+}
+
+.credits{
+	font-family:$mainFont;
+	a{
+		color:black;
+		&:hover{
+			color:$blue;
+			transition:0.5s;
+		}
+	}
+}
 
 
 

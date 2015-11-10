@@ -24,7 +24,8 @@ function theme_setup() {
   * adding additional menus to the array. */
 	register_nav_menus( array(
 		'primary' => 'Primary Navigation',
-		'gallery' => 'Gallery Navigation'
+		'gallery' => 'Gallery Navigation',
+		'footer' => 'Footer Navigation'
 	) );
 
 	/*
