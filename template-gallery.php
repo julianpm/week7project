@@ -44,7 +44,7 @@ get_header();  ?>
 				    <ul class="firstPortfolio flex">
 				        <?php foreach( $images as $image ): ?>
 				            <li>
-				                <a href="<?php echo $image['url']; ?>">
+				                <a href="<?php echo $image['url']; ?>" data-lightbox="portfolio">
 				                     <img src="<?php echo $image['sizes']['galleryPicture']; ?>" alt="<?php echo $image['alt']; ?>" />
 				                </a>
 				                <p><?php echo $image['caption']; ?></p>
@@ -95,7 +95,7 @@ get_header();  ?>
 				    <ul class="secondPortfolio flex">
 				        <?php foreach( $images as $image ): ?>
 				            <li>
-				                <a href="<?php echo $image['url']; ?>">
+				                <a href="<?php echo $image['url']; ?>" data-lightbox="portfolio">
 				                     <img src="<?php echo $image['sizes']['galleryPicture']; ?>" alt="<?php echo $image['alt']; ?>" />
 				                </a>
 				                <p><?php echo $image['caption']; ?></p>

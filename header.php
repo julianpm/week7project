@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="<?php bloginfo('template_url') ?>/style.css">
     <link href='https://fonts.googleapis.com/css?family=Yantramanav' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Pontano+Sans' rel='stylesheet' type='text/css'>
+    <link href="<?php bloginfo('template_url') ?>/lightbox.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
     <?php // Lets other plugins and files tie into our theme's <head>:
