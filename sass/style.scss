@@ -181,7 +181,6 @@ background-position: center 40px;
 }
 
 .mainMenu{
-	border:2px solid red;
 	list-style:none;
 	justify-content:space-around;
 	position:relative;
@@ -349,7 +348,6 @@ background-position: center 40px;
 // BLOG
 
 .mainBlog{
-	border:2px solid magenta;
 	max-width:95%;
 	justify-content:space-around;
 	margin-top:4%;
@@ -378,19 +376,12 @@ background-position: center 40px;
 	}
 
 	.entry-content{
-		border:2px solid green;
 		width: 65%;
 		h3{
 			margin:0;
 			padding:0;
 		}
 	}
-
-	// .indiv-entry-content{
-	// 	border:2px solid blue;
-	// 	width: 90%;
-	// 	margin: 0 auto;
-	// }
 
 	.indiv-entry-stuff{
 		width: 95%;
@@ -420,9 +411,6 @@ background-position: center 40px;
 			margin-top:5%;
 		}
 	}
-	.post{
-		border:2px solid orange;
-	}
 
 
 
@@ -445,7 +433,7 @@ background-position: center 40px;
 		justify-content:space-between;
 		padding-top:0;
 		li{
-			padding:8% 0;
+			padding:10% 0;
 		}
 	}
 
