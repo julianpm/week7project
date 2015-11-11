@@ -465,7 +465,7 @@ background-position: center 40px;
 
 @media all and (max-width: 920px){
 	.mainFooter{
-		max-width: 50%;
+		width: 60%;
 		font-size:12px;
 	}
 }
@@ -476,9 +476,21 @@ background-position: center 40px;
 	}
 }
 
+@media all and (max-width: 780px){
+	.mainFooter{
+		font-size:10px;
+	}
+}
+
 @media all and (max-width: 685px){
 	.siteMenu{
 		width: 70%;
+	}
+}
+
+@media all and (max-width: 655px){
+	.mainFooter{
+		max-width:90%;
 	}
 }
 
@@ -503,6 +515,9 @@ background-position: center 40px;
 		a{
 			padding:5px 10px;
 		}
+	}
+	.mainFooter{
+		max-width: 90%;
 	}
 }
 
