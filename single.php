@@ -1,13 +1,13 @@
 <?php get_header(); ?>
 
 <div class="main">
-  <div class="container mainBlog flex">
+  <div class="container flex">
 
-    <div class="content flex">
+    <div class="content singleBlog flex">
       <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
          
 
-          <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+      <div class="singlePost" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <h2 class="entry-title indiv-entry-stuff"><?php the_title(); ?></h2>
 
           <?php the_post_thumbnail( 'blogPicture', array('class' => 'blogPostPic' ) ); ?>
@@ -29,15 +29,15 @@
             <?php hackeryou_posted_in(); ?>
             <?php edit_post_link( 'Edit', '<span class="edit-link">', '</span>' ); ?>
           </div><!-- .entry-utility -->
-        
+
           <div id="nav-below" class="navigation">
             <p class="nav-previous indiv-entry-stuff"><?php previous_post_link('%link', '&larr; %title'); ?></p>
             <p class="nav-next indiv-entry-stuff"><?php next_post_link('%link', '%title &rarr;'); ?></p>
           </div><!-- #nav-below -->
-          
+
         </div><!-- #post-## -->
 
-          
+
 
 
       <?php endwhile; // end of the loop. ?>

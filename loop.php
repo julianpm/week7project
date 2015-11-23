@@ -25,7 +25,10 @@
 			<h3 class="entry-title">
 				<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
 			</h3>	
-			<?php the_excerpt(); ?>
+			<p class="entryBlurb">
+				<?php the_excerpt(); ?>
+			</p>
+
 			<?php wp_link_pages( array(
 					'before' => '<div class="page-link"> Pages:',
 					'after' => '</div>'

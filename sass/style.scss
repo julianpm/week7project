@@ -48,11 +48,6 @@ img {
 	margin: 0 auto;
 }
 
-.content {
-	width: 80%;
-	margin-right: 5%;
-}
-
 .full {
 	width: 100%;
 }
@@ -349,13 +344,13 @@ background-position: center 40px;
 
 .mainBlog{
 	max-width:95%;
-	justify-content:space-around;
 	margin-top:4%;
 	font-family:$mainFont;
+	justify-content:space-around;
 }
 
 .allBlogPosts{
-	width: 40%;
+	width: 55%;
 }
 
 .entry-title a, .continueReading, .widget_recent_entries a, .widget_archive a, .widget_calendar a, .widget_categories a, .entry-meta a, .entry-utility a, .nav-next a, .nav-previous a, .leaveReply a {
@@ -368,23 +363,25 @@ background-position: center 40px;
 
 // individual blog post styles:
 
-	
+	.singleBlog{
+		justify-content:space-around;
+		margin-top:4%;
+	}
+
+	.singlePost{
+		width: 50%;
+	}
 
 	.blogPost{
-		margin:5% 0;
-		justify-content:space-around;
+		margin-bottom:5%;
 	}
 
 	.entry-content{
-		width: 65%;
+		width: 100%;
 		h3{
 			margin:0;
 			padding:0;
 		}
-	}
-
-	.indiv-entry-stuff{
-		width: 85%;
 	}
 
 	.postDate{
@@ -405,11 +402,8 @@ background-position: center 40px;
 		margin-top:8%;
 	}
 
-	.type-post{
-		width: 70%;
-		h3{
-			margin-top:5%;
-		}
+	.type-post h3{
+		margin-top:5%;
 	}
 
 
