@@ -3,7 +3,7 @@
 <div class="main">
   <div class="container mainBlog flex">
 
-    <div class="content">
+    <div class="content flex">
       <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
          
 
@@ -29,19 +29,22 @@
             <?php hackeryou_posted_in(); ?>
             <?php edit_post_link( 'Edit', '<span class="edit-link">', '</span>' ); ?>
           </div><!-- .entry-utility -->
+        
+          <div id="nav-below" class="navigation">
+            <p class="nav-previous indiv-entry-stuff"><?php previous_post_link('%link', '&larr; %title'); ?></p>
+            <p class="nav-next indiv-entry-stuff"><?php next_post_link('%link', '%title &rarr;'); ?></p>
+          </div><!-- #nav-below -->
+          
         </div><!-- #post-## -->
 
-        <div id="nav-below" class="navigation">
-          <p class="nav-previous indiv-entry-stuff"><?php previous_post_link('%link', '&larr; %title'); ?></p>
-          <p class="nav-next indiv-entry-stuff"><?php next_post_link('%link', '%title &rarr;'); ?></p>
-        </div><!-- #nav-below -->
+          
 
 
       <?php endwhile; // end of the loop. ?>
 
-    </div> <!-- /.content -->
+      <?php get_sidebar(); ?>
 
-    <?php get_sidebar(); ?>
+    </div> <!-- /.content -->
 
   </div> <!-- /.container -->
 </div> <!-- /.main -->
