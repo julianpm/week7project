@@ -60,8 +60,6 @@ body{
 
 
 
-
-
 // UNIVERSAL STYLES
 
 .siteMenu{
@@ -151,12 +149,6 @@ body{
 
 
 
-
-
-
-
-
-
 // HOME
 
 .homeContainer{
@@ -171,17 +163,12 @@ background-size:75%;
 background-position: center 40px;
 }
 
-.siteNavigation--Main{
-	position:relative;
-}
-
 .mainMenu{
+	width: 100%;
 	list-style:none;
 	justify-content:space-around;
-	position:relative;
 	padding:60% 0 0 0;
-	margin:0;
-
+	margin:0 auto;
 	a{
 		padding:8px 25px;
 		background: rgba(black,0.7);
@@ -196,9 +183,6 @@ background-position: center 40px;
 		}
 	}
 }
-
-
-
 
 
 
@@ -246,12 +230,6 @@ background-position: center 40px;
 
 
 
-
-
-
-
-
-
 // ABOUT
 
 .aboutInfo{
@@ -277,13 +255,6 @@ background-position: center 40px;
 .shopRules{
 	margin-top:6%;
 }
-
-
-
-
-
-
-
 
 
 
@@ -328,13 +299,6 @@ background-position: center 40px;
 	border-top:1px solid black;
 	margin:4% auto 0 auto;
 }
-
-
-
-
-
-
-
 
 
 
@@ -410,13 +374,10 @@ background-position: center 40px;
 
 
 
-
-
-
-
-
-
 // MEDIA QUERIES
+
+
+
 
 // HOME PAGE
 
@@ -425,10 +386,8 @@ background-position: center 40px;
 		flex-direction:column;
 		align-items:center;
 		justify-content:space-between;
-		padding-top:0;
-		li{
-			padding:1% 0;
-		}
+		padding:0;
+		margin-top:10%;
 	}
 
 	.home{
@@ -436,12 +395,6 @@ background-position: center 40px;
 		background-position: center; 
 	}
 }
-
-
-
-
-
-
 
 
 
@@ -510,13 +463,6 @@ background-position: center 40px;
 
 
 
-
-
-
-
-
-
-
 // ABOUT
 
 @media all and (max-width: 700px){
@@ -531,12 +477,6 @@ background-position: center 40px;
 
 
 
-
-
-
-
-
-
 // CONTACT
 
 @media all and (max-width: 700px){
@@ -544,23 +484,6 @@ background-position: center 40px;
 	width: 100%;
 	}
 }
-
-
-
-
-
-
-
-
-
-// CREDITS
-
-// None.
-
-
-
-
-
 
 
 

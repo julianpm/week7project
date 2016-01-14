@@ -35,14 +35,15 @@
 <div id="page">
 
         <?php if ( is_front_page() ) : ?>
-          <header id="top" role="banner" class="site-header homeContainer">
+          <header id="top" role="banner" class="site-header homeContainer flex">
         <!-- <a href="#main" class="visuallyhidden focusable" id="skiptomain"></a> -->
         
-          <nav class="siteNavigation--Main" role="navigation">
-              <ul class="mainMenu flex">
+          <nav class="siteNavigation--Main mainMenu flex" role="navigation">
+              <!-- <ul class="mainMenu flex"> -->
                   <?php wp_nav_menu( array( "theme_location" => "primary", "container" => '', 'items_wrap'=> '%3$s' ) ); ?>
-              </ul><!-- .menu -->
+              <!-- </ul>.menu -->
           </nav><!-- siteNavigation -->  
+          
           </header> <!-- END OF CONTAINER -->
   
   
