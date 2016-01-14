@@ -408,7 +408,7 @@ background-position: center 40px;
 	}
 }
 
-@media all and (max-width: 1050px){
+@media all and (max-width: 1070px){
 	.firstArtistPortfolio, .secondArtistPortfolio{
 		flex-direction:column;
 	}
@@ -418,6 +418,12 @@ background-position: center 40px;
 	}
 	.firstArtistPic, .secondArtistPic{
 		margin:0 auto;
+	}
+}
+
+@media all and (max-width: 900px){
+	.firstArtistPic, .secondArtistPic{
+		width: 60%;
 	}
 }
 
@@ -433,6 +439,9 @@ background-position: center 40px;
 @media all and (max-width: 685px){
 	.siteMenu{
 		width: 70%;
+	}
+	.firstArtistPic, .secondArtistPic{
+		width: 80%;
 	}
 }
 
