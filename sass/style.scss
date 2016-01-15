@@ -163,11 +163,15 @@ background-size:75%;
 background-position: center 40px;
 }
 
+.siteNavigation--Main{
+	width: 100%;
+}
+
 .mainMenu{
 	width: 100%;
 	list-style:none;
 	justify-content:space-around;
-	padding:60% 0 0 0;
+	padding:55% 0 0 0;
 	margin:0 auto;
 	a{
 		padding:8px 25px;
@@ -385,11 +389,8 @@ background-position: center 40px;
 	.mainMenu{
 		flex-direction:column;
 		align-items:center;
-		justify-content:space-between;
-		padding:0;
-		margin-top:10%;
+		padding-top:10%;
 	}
-
 	.home{
 		background-size:cover;
 		background-position: center; 
@@ -448,12 +449,6 @@ background-position: center 40px;
 @media all and (max-width: 590px){
 	.siteMenu{
 		width: 80%;
-	}
-}
-
-@media all and (max-width: 545px){
-	.mainMenu{
-		margin-top:30%;
 	}
 }
 
